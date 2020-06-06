@@ -707,7 +707,7 @@ auto fcn2(It beg, It end) -> typename remove_reference<decltype(*beg)>::type
 用花括号初始化器列表初始化一个对象，其中对应构造函数接受一个 `std::initializer_list` 参数.
 
 initializer_list 使用
-
+如果传入vector来initialize的话，编译器会把vector里的每一个元素当成为一个parameter，但是如果用initializer_list的话，就会把它当成一个vector
 ```cpp
 #include <iostream>
 #include <vector>
